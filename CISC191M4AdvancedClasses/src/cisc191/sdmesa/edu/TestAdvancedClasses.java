@@ -48,7 +48,8 @@ import org.junit.jupiter.api.TestMethodOrder;
  * equal. If they are equal the test passes; if not, the test will be marked as
  * failed and the execution stops.
  * 
- * To run the tests in this file from the main menu, select Run -> Run As -> JUnit
+ * To run the tests in this file from the main menu, select Run -> Run As ->
+ * JUnit
  * with the file selected.
  * 
  * To implement a test method:
@@ -65,13 +66,11 @@ import org.junit.jupiter.api.TestMethodOrder;
  * 
  */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class TestAdvancedClasses
-{
-	
+class TestAdvancedClasses {
+
 	@Test
-    @Order(1)
-	void testAbstractInheritance1()
-	{
+	@Order(1)
+	void testAbstractInheritance1() {
 		Cycle cycle = new Unicycle("Uni1");
 		assertEquals("Uni1", cycle.getMake());
 		assertEquals(1, cycle.getNumberOfWheels());
@@ -80,162 +79,160 @@ class TestAdvancedClasses
 		assertEquals(Color.RED, cycle.getColor());
 	}
 
-	// Where is the best class to implement color, so you do not have to repeat code in multiple classes?
-	
-//	@Order(2)
-//	@Test
-//	void testAbstractInheritance2()
-//	{
-//		Cycle bike = new Bicycle("Tooney");
-//		assertEquals("Tooney", bike.getMake());
-//		assertEquals(2, bike.getNumberOfWheels());
-//		assertEquals(2, bike.getFrameNumber());
-//		bike.setColor(Color.GREEN);
-//		assertEquals(Color.GREEN, bike.getColor());
-//		
-//		Cycle eBike = new ElectricMountainBike("EMB");
-//		assertEquals("EMB", eBike.getMake());
-//		assertEquals(2, eBike.getNumberOfWheels());
-//		assertEquals(3, eBike.getFrameNumber());
-//		eBike.setColor(Color.RED);
-//		assertEquals(Color.RED, eBike.getColor());
-//	}
-//	
-//	@Order(3)
-//	@Test
-//	void testToString()
-//	{
-//		Cycle cycle1 = new Unicycle("Uni");
-//		cycle1.setColor(Color.RED);
-//		cycle1FrameNumber = cycle1.getFrameNumber();
-//		assertEquals("Uni (" + cycle1FrameNumber +")", cycle1.toString());
-//		
-//		Cycle cycle2 = new Unicycle("Uni"); 
-//		cycle2.setColor(Color.BLUE);
-//		assertEquals("Uni (" + cycle2FrameNumber +")", cycle2.toString());
-//
-//		assertNotEquals(cycle1.toString(), cycle2.toString());
-//	}
-//	
-//  @Order(4)	
-//	@Test
-//	void testEquals()
-//	{
-//		Cycle cycle1 = new Unicycle("Uni");
-//		cycle1.setColor(Color.BLUE);
-//		Cycle cycle2 = new Unicycle("Uni");
-//		cycle2.setColor(Color.BLUE);
-//		
-//		// Cycles are "equal" if their frame numbers are the same
-//		assertTrue(cycle1.equals(cycle1));
-//		assertFalse(cycle1.equals(cycle2));
-//		assertFalse(cycle2.equals(cycle1));
-//		
-//		Bicycle bike1 = new Bicycle("Toony");
-//		bike1.setColor(Color.RED);
-//		Bicycle bike2 = new Bicycle("Toony");
-//		bike2.setColor(Color.RED);
-//
-//		assertTrue(bike1.equals(bike1));
-//		assertFalse(bike1.equals(bike2));
-//		assertFalse(bike2.equals(bike1));
-//		
-//		assertFalse(cycle1.equals("Not a bike"));
-//		assertFalse(cycle1.equals(null));
-//
-//		assertFalse(bike1.equals("Not a bike"));
-//		assertFalse(bike1.equals(null));
-//	}
+	// Where is the best class to implement color, so you do not have to repeat code
+	// in multiple classes?
 
-//  @Order(5)
-//	@Test
-//	void testGearable()
-//	{
-//		Gearable conveyance = new ElectricMountainBike("EMBG");
-//		// Test that conveyance is-a Cycle
-//		assertInstanceOf(Cycle.class, conveyance);
-//		assertTrue(conveyance.toString().contains("EMBG"));
-//		
-//		assertEquals(1, conveyance.getGear());
-//		conveyance.gearUp();
-//		assertEquals(2, conveyance.getGear());
-//		conveyance.gearDown();
-//		assertEquals(1, conveyance.getGear());
-//		conveyance.gearDown();
-//		assertEquals(1, conveyance.getGear());
-//	}
-//	
-//  	@Order(6)
-//	@Test
-//	void testMovable()
-//	{
-//		Movable conveyance = new ElectricMountainBike("EMBM");
-//		// Test that conveyance is-a Cycle
-//		assertInstanceOf(Cycle.class, conveyance);
-//		assertTrue(conveyance.toString().contains("EMBM"));
-//		
-//		assertEquals(0, conveyance.getSpeed());
-//		conveyance.speedUp();
-//		assertEquals(1, conveyance.getSpeed());
-//		conveyance.speedUp();
-//		assertEquals(2, conveyance.getSpeed());
-//	}
-//
-//  	@Order(7)
-//	@Test
-//	void testElectric()
-//	{
-//		Chargeable conveyance = new ElectricMountainBike("EMBC");
-//		// Test that conveyance is-a Cycle
-//		assertInstanceOf(Cycle.class, conveyance);
-//		assertTrue(conveyance.toString().contains("EMBC"));
-//		
-//		assertEquals(0, conveyance.getCharge());
-//		conveyance.chargeTo(80);
-//		assertEquals(80, conveyance.getCharge());
-//		conveyance.speedUp();
-//		assertEquals(79, conveyance.getCharge());
-//		conveyance.speedUp();
-//		assertEquals(78, conveyance.getCharge());
-//	}
-//	
-//	@Order(8)	
-//	@Test
-//	void testDynamicBinding()
-//	{
-//		BikeShop shop = new BikeShop("Joe's Bike Rack");
-//		assertEquals("Joe's Bike Rack", shop.getName());
-//		assertTrue(shop.toString().contains("Joe's Bike Rack"));
-//		
-//		// Model that a bike shop has-many cycles
-//	    // Make sure the bike shop can have at least 10 bikes.
-//		assertTrue(0, shop.getNumberOfBikesInInventory());
-//		
-//		ElectricMountainBike conveyance1 = new ElectricMountainBike("BigMountainBike");
-//		shop.addToInventory(conveyance1);
-//		assertTrue(1, shop.getNumberOfBikesInInventory());
-//		assertTrue(shop.toString().contains(conveyance1.toString()));
-//		
-//		Unicycle conveyance2 = new Unicycle("Looney");
-//		shop.addToInventory(conveyance2);
-//		assertTrue(2, shop.getNumberOfBikesInInventory());
-//		assertTrue(shop.toString().contains(conveyance2.toString()));
-//		assertTrue(shop.toString().contains(conveyance1.toString()));
-//		
-//		Unicycle conveyance3 = new Bicycle("Tooney");
-//		shop.addToInventory(conveyance3);
-//		assertTrue(3, shop.getNumberOfBikesInInventory());
-//		assertTrue(shop.toString().contains(conveyance3.toString()));
-//		assertTrue(shop.toString().contains(conveyance2.toString()));
-//		assertTrue(shop.toString().contains(conveyance1.toString()));
-//		
-//		Unicycle conveyance4 = new ElectricMountainBike("SmallMountainBike");
-//		shop.addToInventory(conveyance4);
-//		assertTrue(4, shop.getNumberOfBikesInInventory());
-//		assertTrue(shop.toString().contains(conveyance4.toString()));
-//		assertTrue(shop.toString().contains(conveyance3.toString()));
-//		assertTrue(shop.toString().contains(conveyance2.toString()));
-//		assertTrue(shop.toString().contains(conveyance1.toString()));
-//	}
+	@Order(2)
+	@Test
+	void testAbstractInheritance2() {
+		Cycle bike = new Bicycle("Tooney");
+		assertEquals("Tooney", bike.getMake());
+		assertEquals(2, bike.getNumberOfWheels());
+		assertEquals(2, bike.getFrameNumber());
+		bike.setColor(Color.GREEN);
+		assertEquals(Color.GREEN, bike.getColor());
+
+		Cycle eBike = new ElectricMountainBike("EMB");
+		assertEquals("EMB", eBike.getMake());
+		assertEquals(2, eBike.getNumberOfWheels());
+		assertEquals(3, eBike.getFrameNumber());
+		eBike.setColor(Color.RED);
+		assertEquals(Color.RED, eBike.getColor());
+	}
+
+	//
+	@Order(3)
+	@Test
+	void testToString() {
+		Cycle cycle1 = new Unicycle("Uni");
+		cycle1.setColor(Color.RED);
+		int cycle1FrameNumber = cycle1.getFrameNumber();
+		assertEquals("Uni (" + cycle1FrameNumber + ")", cycle1.toString());
+
+		Cycle cycle2 = new Unicycle("Uni");
+		cycle2.setColor(Color.BLUE);
+		int cycle2FrameNumber = cycle2.getFrameNumber();
+		assertEquals("Uni (" + cycle2FrameNumber + ")", cycle2.toString());
+
+		assertNotEquals(cycle1.toString(), cycle2.toString());
+	}
+
+	//
+	@Order(4)
+	@Test
+	void testEquals() {
+		Cycle cycle1 = new Unicycle("Uni");
+		cycle1.setColor(Color.BLUE);
+		Cycle cycle2 = new Unicycle("Uni");
+		cycle2.setColor(Color.BLUE);
+
+		// Cycles are "equal" if their frame numbers are the same
+		assertTrue(cycle1.equals(cycle1));
+		assertFalse(cycle1.equals(cycle2));
+		assertFalse(cycle2.equals(cycle1));
+
+		Bicycle bike1 = new Bicycle("Toony");
+		bike1.setColor(Color.RED);
+		Bicycle bike2 = new Bicycle("Toony");
+		bike2.setColor(Color.RED);
+
+		assertTrue(bike1.equals(bike1));
+		assertFalse(bike1.equals(bike2));
+		assertFalse(bike2.equals(bike1));
+
+		assertFalse(cycle1.equals("Not a bike"));
+		assertFalse(cycle1.equals(null));
+
+		assertFalse(bike1.equals("Not a bike"));
+		assertFalse(bike1.equals(null));
+	}
+
+	@Order(5)
+	@Test
+	void testGearable() {
+		Gearable conveyance = new ElectricMountainBike("EMBG");
+		// Test that conveyance is-a Cycle
+		assertInstanceOf(Cycle.class, conveyance);
+		assertTrue(conveyance.toString().contains("EMBG"));
+
+		assertEquals(1, conveyance.getGear());
+		conveyance.gearUp();
+		assertEquals(2, conveyance.getGear());
+		conveyance.gearDown();
+		assertEquals(1, conveyance.getGear());
+		conveyance.gearDown();
+		assertEquals(1, conveyance.getGear());
+	}
+
+	@Order(6)
+	@Test
+	void testMovable() {
+		Movable conveyance = new ElectricMountainBike("EMBM");
+		// Test that conveyance is-a Cycle
+		assertInstanceOf(Cycle.class, conveyance);
+		assertTrue(conveyance.toString().contains("EMBM"));
+
+		assertEquals(0, conveyance.getSpeed());
+		conveyance.speedUp();
+		assertEquals(1, conveyance.getSpeed());
+		conveyance.speedUp();
+		assertEquals(2, conveyance.getSpeed());
+	}
+
+	//
+	@Order(7)
+	@Test
+	void testElectric() {
+		Chargeable conveyance = new ElectricMountainBike("EMBC");
+		// Test that conveyance is-a Cycle
+		assertInstanceOf(Cycle.class, conveyance);
+		assertTrue(conveyance.toString().contains("EMBC"));
+
+		assertEquals(0, conveyance.getCharge());
+		conveyance.chargeTo(80);
+		assertEquals(80, conveyance.getCharge());
+		conveyance.speedUp();
+		assertEquals(79, conveyance.getCharge());
+		conveyance.speedUp();
+		assertEquals(78, conveyance.getCharge());
+	}
+
+	@Order(8)
+	@Test
+	void testDynamicBinding() {
+		BikeShop shop = new BikeShop("Joe's Bike Rack");
+		assertEquals("Joe's Bike Rack", shop.getName());
+		assertTrue(shop.toString().contains("Joe's Bike Rack"));
+
+		// Model that a bike shop has-many cycles
+		// Make sure the bike shop can have at least 10 bikes.
+		assertEquals(0, shop.getNumberOfBikesInInventory());
+
+		ElectricMountainBike conveyance1 = new ElectricMountainBike("BigMountainBike");
+		shop.addToInventory(conveyance1);
+		assertEquals(1, shop.getNumberOfBikesInInventory());
+		assertTrue(shop.toString().contains(conveyance1.toString()));
+
+		Unicycle conveyance2 = new Unicycle("Looney");
+		shop.addToInventory(conveyance2);
+		assertEquals(2, shop.getNumberOfBikesInInventory());
+		assertTrue(shop.toString().contains(conveyance2.toString()));
+		assertTrue(shop.toString().contains(conveyance1.toString()));
+
+		Bicycle conveyance3 = new Bicycle("Tooney");
+		shop.addToInventory(conveyance3);
+		assertEquals(3, shop.getNumberOfBikesInInventory());
+		assertTrue(shop.toString().contains(conveyance3.toString()));
+		assertTrue(shop.toString().contains(conveyance2.toString()));
+		assertTrue(shop.toString().contains(conveyance1.toString()));
+
+		ElectricMountainBike conveyance4 = new ElectricMountainBike("SmallMountainBike");
+		shop.addToInventory(conveyance4);
+		assertEquals(4, shop.getNumberOfBikesInInventory());
+		assertTrue(shop.toString().contains(conveyance4.toString()));
+		assertTrue(shop.toString().contains(conveyance3.toString()));
+		assertTrue(shop.toString().contains(conveyance2.toString()));
+		assertTrue(shop.toString().contains(conveyance1.toString()));
+	}
 
 }

@@ -40,8 +40,7 @@ import edu.gatech.cc.Pixel;
  * 
  */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class Tests
-{
+public class Tests {
 
 	/**
 	 * Check to see if the blue value of each pixel in an image has been set to
@@ -49,8 +48,7 @@ public class Tests
 	 */
 	@Test
 	@Order(1)
-	public void testZeroBlue()
-	{
+	public void testZeroBlue() {
 		/* Create two identical Picture objects from the same picture */
 		Picture studentPicture = new Picture("bees.png");
 		Picture expectedPicture = new Picture("beesZeroBlue.png");
@@ -65,8 +63,7 @@ public class Tests
 
 	@Test
 	@Order(2)
-	public void testBlackAndWhite()
-	{
+	public void testBlackAndWhite() {
 		/* Create two identical Picture objects from the same picture */
 		Picture studentPicture = new Picture("bees.png");
 		Picture expectedPicture = new Picture("beesBlackAndWhite.png");
@@ -79,112 +76,109 @@ public class Tests
 		assertEquals(expectedPicture, studentPicture, "Black and White");
 	}
 
-//	@Test
-//	@Order(3)
-//	public void testNegative()
-//	{
-//		/* Create two identical Picture objects from the same picture */
-//		Picture studentPicture = new Picture("bees.png");
-//		Picture expectedPicture = new Picture("beesNegative.png");
-//
-//		/* apply the filter */
-//		Logic.negative(studentPicture);
-//
-//		// the resulting student image should be pixel by pixel equivalent to
-//		// the expectedPicture image
-//		assertEquals(expectedPicture, studentPicture, "Negative");
-//	}
-//
-//	@Test
-//	@Order(4)
-//	public void testMakeSunset()
-//	{
-//		/* Create two identical Picture objects from the same picture */
-//		Picture studentPicture = new Picture("fireFall.png");
-//		Picture expectedPicture = new Picture("fireFallMakeSunset.png");
-//
-//		/* apply the filter */
-//		Logic.makeSunset(studentPicture, 1.5, .9);
-//
-//		// the resulting student image should be pixel by pixel equivalent to
-//		// the expectedPicture image
-//		assertEquals(expectedPicture, studentPicture, "Make Sunset");
-//	}
-//
-//	@Test
-//	@Order(5)
-//	void testFlipHorizontal()
-//	{
-//		/* Create two identical Picture objects from the same picture */
-//		Picture studentPicture = new Picture("fireFall.png");
-//		Picture expectedPicture = new Picture("fireFallFlipHorizontal.png");
-//
-//		/* apply the filter */
-//		Logic.flipHorizontal(studentPicture);
-//
-//		// the resulting student image should be pixel by pixel equivalent to
-//		// the expectedPicture image
-//		assertEquals(expectedPicture, studentPicture, "Flip Horizontal");
-//	}
-//
-//	@Test
-//	@Order(6)
-//	public void testFlipVertical()
-//	{
-//		/* Create two identical Picture objects from the same picture */
-//		Picture studentPicture = new Picture("fireFall.png");
-//		Picture expectedPicture = new Picture("fireFallFlipVertical.png");
-//
-//		/* apply the filter */
-//		Logic.flipVertical(studentPicture);
-//
-//		// the resulting student image should be pixel by pixel equivalent to
-//		// the expectedPicture image
-//		assertEquals(expectedPicture, studentPicture, "Flip Vertical");
-//	}
-//
-//	@Test
-//	@Order(7)
-//	public void testBlur()
-//	{
-//		/* Create two identical Picture objects from the same picture */
-//		Picture studentPicture = new Picture("fireFall.png");
-//		Picture expectedPicture = new Picture("fireFallBlur.png");
-//
-//		/* apply the filter */
-//		Logic.blur(studentPicture);
-//
-//		// the resulting student image should be pixel by pixel equivalent to
-//		// the expectedPicture image
-//		assertEquals(expectedPicture, studentPicture, "Blur");
-//	}
+	@Test
+	@Order(3)
+	public void testNegative() {
+		/* Create two identical Picture objects from the same picture */
+		Picture studentPicture = new Picture("bees.png");
+		Picture expectedPicture = new Picture("beesNegative.png");
+
+		/* apply the filter */
+		Logic.negative(studentPicture);
+
+		// the resulting student image should be pixel by pixel equivalent to
+		// the expectedPicture image
+		assertEquals(expectedPicture, studentPicture, "Negative");
+	}
+
+	//
+	@Test
+	@Order(4)
+	public void testMakeSunset() {
+		/* Create two identical Picture objects from the same picture */
+		Picture studentPicture = new Picture("fireFall.png");
+		Picture expectedPicture = new Picture("fireFallMakeSunset.png");
+
+		/* apply the filter */
+		Logic.makeSunset(studentPicture, 1.5, .9);
+
+		// the resulting student image should be pixel by pixel equivalent to
+		// the expectedPicture image
+		assertEquals(expectedPicture, studentPicture, "Make Sunset");
+	}
+
+	//
+	@Test
+	@Order(5)
+	void testFlipHorizontal() {
+		/* Create two identical Picture objects from the same picture */
+		Picture studentPicture = new Picture("fireFall.png");
+		Picture expectedPicture = new Picture("fireFallFlipHorizontal.png");
+
+		/* apply the filter */
+		Logic.flipHorizontal(studentPicture);
+
+		// the resulting student image should be pixel by pixel equivalent to
+		// the expectedPicture image
+		assertEquals(expectedPicture, studentPicture, "Flip Horizontal");
+	}
+
+	//
+	@Test
+	@Order(6)
+	public void testFlipVertical() {
+		/* Create two identical Picture objects from the same picture */
+		Picture studentPicture = new Picture("fireFall.png");
+		Picture expectedPicture = new Picture("fireFallFlipVertical.png");
+
+		/* apply the filter */
+		Logic.flipVertical(studentPicture);
+
+		// the resulting student image should be pixel by pixel equivalent to
+		// the expectedPicture image
+		assertEquals(expectedPicture, studentPicture, "Flip Vertical");
+	}
+
+	@Test
+	@Order(7)
+	public void testBlur() {
+		/* Create two identical Picture objects from the same picture */
+		Picture studentPicture = new Picture("fireFall.png");
+		Picture expectedPicture = new Picture("fireFallBlur.png");
+
+		/* apply the filter */
+		Logic.blur(studentPicture);
+
+		// the resulting student image should be pixel by pixel equivalent to
+		// the expectedPicture image
+		assertEquals(expectedPicture, studentPicture, "Blur");
+	}
 
 	// //////// Private utility methods
 
 	/**
-	 * Purpose: Checks that the student picture is the same as the expected picture pixel by pixel
+	 * Purpose: Checks that the student picture is the same as the expected picture
+	 * pixel by pixel
+	 * 
 	 * @param expectedPicture
 	 * @param studentPicture
-	 * @param filterName Name of test/filter that is supposed to have been applied to the student picture
+	 * @param filterName      Name of test/filter that is supposed to have been
+	 *                        applied to the student picture
 	 */
 	private void assertEquals(Picture expectedPicture, Picture studentPicture,
-			String filterName)
-	{
+			String filterName) {
 		Pixel[][] expectedPixels = expectedPicture.getPixels2D();
 		Pixel[][] studentPixels = studentPicture.getPixels2D();
 
-		if (expectedPixels.length != studentPixels.length)
-		{
+		if (expectedPixels.length != studentPixels.length) {
 			fail("Images do not match. Expected number of rows: "
 					+ expectedPixels.length + ", actual number of rows: "
 					+ studentPixels.length);
 		}
 
 		// visit every row
-		for (int row = 0; row < expectedPixels.length; row++)
-		{
-			if (expectedPixels[row].length != studentPixels[row].length)
-			{
+		for (int row = 0; row < expectedPixels.length; row++) {
+			if (expectedPixels[row].length != studentPixels[row].length) {
 				fail("Images do not match. For row number: " + row
 						+ " expected number of columns: "
 						+ expectedPixels[row].length
@@ -193,13 +187,11 @@ public class Tests
 			}
 
 			// visit every column in the row
-			for (int col = 0; col < expectedPixels[row].length; col++)
-			{
+			for (int col = 0; col < expectedPixels[row].length; col++) {
 				// Pixel values of student and expectedPicture should be the
 				// same
 				if (!expectedPixels[row][col].getColor()
-						.equals(studentPixels[row][col].getColor()))
-				{
+						.equals(studentPixels[row][col].getColor())) {
 					showGUIAndWait(expectedPicture, studentPicture, filterName);
 					fail("Images do not match. Pixel at row: " + row
 							+ " column: " + col + " expected value: "
@@ -212,17 +204,18 @@ public class Tests
 	}
 
 	/**
-	 * Purpose: Show expected and student pictures side-by-side for visual comparison
+	 * Purpose: Show expected and student pictures side-by-side for visual
+	 * comparison
+	 * 
 	 * @param expectedPicture
 	 * @param studentPicture
-	 * @param filterName Name of test/filter that is supposed to have been applied to the student picture
+	 * @param filterName      Name of test/filter that is supposed to have been
+	 *                        applied to the student picture
 	 */
 	private void showGUIAndWait(Picture expectedPicture, Picture studentPicture,
-			String filterName)
-	{
+			String filterName) {
 		// a trick - system in will force test to wait
-		try
-		{
+		try {
 			PipedOutputStream out = new PipedOutputStream();
 			PipedInputStream in = new PipedInputStream(out);
 			System.setIn(in);
@@ -238,9 +231,7 @@ public class Tests
 			// In another thread or class:
 			System.in.read();
 
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			// You must pass the filters one-by-one.
 			System.err.println("Error reading input: " + e);
 		}

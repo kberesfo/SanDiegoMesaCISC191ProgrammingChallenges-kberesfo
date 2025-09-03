@@ -1,0 +1,9 @@
+{
+    // Disable GitHub Copilot completions
+    "github.copilot.enable": {
+        "completions": false
+    },
+
+    // Disable IntelliCode completions for Java
+    "vsintellicode.java.completionsEnabled": false
+}

@@ -4,45 +4,47 @@ import java.awt.Color;
 
 /**
  * Lead Author(s):
- * @author 
- * @author 
- * <<add additional lead authors here, with a full first and last name>>
  * 
- * Other contributors:
- * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
+ * @author Kiernan Beresford
  * 
- * References:
- * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
- * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- * <<add more references here>>
- *  
- * Version/date: 
+ *         References:
+ *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
+ *         Problem Solving.
+ *         Retrieved from
+ *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- * Responsibilities of class:
  * 
+ *         Version/date: 9/3/25
+ * 
+ *         Responsibilities of class:
+ *         A a Bicycle is a Cycle with two wheels
  */
 /**
  * Only change sections that are marked with TODO
  */
 
-//TODO: Implement and comment all IS-A (inheritance) relationships
+// TODO: Implement and comment all IS-A (inheritance) relationships
 
-public abstract class Cycle
-{
-	// TODO: Implement and comment HAS-A relationships separately
-	
+public abstract class Cycle {
+	private String make;
+
 	// A cycle has a unique frame number, that is *immutable*;
-	// How are you going to make it immutable, so that it only gets one final number? 
+	// How are you going to make it immutable, so that it only gets one final
+	// number?
 	// (Hint: did you see the hint?)
-	private int frameNumber;
-	
+	private static int newFrameNumber = 0;
+	final private int frameNumber;
+
 	// A cycle has a make, that is immutable
 	// TODO:
-	
-	public Cycle(String newMake)
-	{
-		// TODO
+	/**
+	 * 
+	 * @param String newMake
+	 */
+	public Cycle(String newMake) {
+		this.make = newMake;
+		this.frameNumber = ++Cycle.newFrameNumber;
 	}
 
 	abstract int getNumberOfWheels();
@@ -64,43 +66,44 @@ public abstract class Cycle
 	 * 
 	 * @return make or brand that was set when the bike was made
 	 */
-	public String getMake()
-	{
-		// TODO
-		return null;
+	public String getMake() {
+		return this.make;
 	}
-	
+
 	/**
 	 * 
-	 * @return the unique serial number that was stamped in the frame when the bike was made
+	 * @return the unique serial number that was stamped in the frame when the bike
+	 *         was made
 	 * @see https://www.eta.co.uk/bicycle-insurance/frequently-asked-questions/how-to-find-a-bicycle-frame-number/
 	 */
-	public int getFrameNumber()
-	{
-		// TODO
-		return -1;
+	public int getFrameNumber() {
+		return this.frameNumber;
 	}
-	
+
 	/**
-	 *  @return true if the frame number are the same
+	 * @return true if the frame number are the same
 	 */
-//	@Override
-//	public boolean equals(Object other)
-//	{
-//		// TODO: 
-//		// Hint: use instanceof
-//		// See: https://www.sitepoint.com/implement-javas-equals-method-correctly/
-//		return false;
-//	}
-	
+	@Override
+	public boolean equals(Object other) {
+		// Hint: use instanceof
+		// See: https://www.sitepoint.com/implement-javas-equals-method-correctly/
+		if (other instanceof Cycle) {
+			// cast to cycle, it feels silly but i guess java doesn't type narrow
+			Cycle cycle = (Cycle) other;
+			if (cycle.getFrameNumber() == this.frameNumber) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
 	/**
 	 * @return String describing the object, including type, make and frame number
 	 */
-//	@Override
-//	public String toString()
-//	{
-//		//TODO:
-//		return "Hello, I'm a Cycle";
-//	}
+	@Override
+	public String toString() {
+		return String.format("(%d)", this.frameNumber);
+	}
 
 }
