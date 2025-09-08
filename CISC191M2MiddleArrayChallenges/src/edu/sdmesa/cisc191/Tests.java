@@ -165,7 +165,9 @@ public class Tests {
 	 * @param filterName      Name of test/filter that is supposed to have been
 	 *                        applied to the student picture
 	 */
-	private void assertEquals(Picture expectedPicture, Picture studentPicture,
+	private void assertEquals(
+			Picture expectedPicture,
+			Picture studentPicture,
 			String filterName) {
 		Pixel[][] expectedPixels = expectedPicture.getPixels2D();
 		Pixel[][] studentPixels = studentPicture.getPixels2D();
@@ -212,7 +214,9 @@ public class Tests {
 	 * @param filterName      Name of test/filter that is supposed to have been
 	 *                        applied to the student picture
 	 */
-	private void showGUIAndWait(Picture expectedPicture, Picture studentPicture,
+	private void showGUIAndWait(
+			Picture expectedPicture,
+			Picture studentPicture,
 			String filterName) {
 		// a trick - system in will force test to wait
 		try {

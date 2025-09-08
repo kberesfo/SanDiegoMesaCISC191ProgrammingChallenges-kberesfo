@@ -18,12 +18,14 @@ import java.awt.Color;
  * 
  *         Responsibilities of class:
  *         A Unicycle is a Cycle with only one wheel
+ *         A Unicycle:
+ *         - is Movable
  */
-
-// TODO: Implement and comment all IS-A (inheritance) relationships
-
-public class Unicycle extends Cycle {
+public class Unicycle extends Cycle implements Movable {
+	// has-a color
 	private Color color;
+	// has-a speed
+	private int speed;
 
 	/**
 	 * 
@@ -63,5 +65,21 @@ public class Unicycle extends Cycle {
 	@Override
 	public String toString() {
 		return String.format("%s %s", this.getMake(), super.toString());
+	}
+
+	@Override
+	public int getSpeed() {
+		return this.speed;
+	}
+
+	@Override
+	public void slowDown() {
+		this.speed = Math.max(0, --this.speed);
+
+	}
+
+	@Override
+	public void speedUp() {
+		this.speed++;
 	}
 }

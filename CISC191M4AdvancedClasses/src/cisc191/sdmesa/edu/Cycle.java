@@ -18,26 +18,17 @@ import java.awt.Color;
  *         Version/date: 9/3/25
  * 
  *         Responsibilities of class:
- *         A a Bicycle is a Cycle with two wheels
+ *         
  */
-/**
- * Only change sections that are marked with TODO
- */
-
-// TODO: Implement and comment all IS-A (inheritance) relationships
 
 public abstract class Cycle {
-	private String make;
-
-	// A cycle has a unique frame number, that is *immutable*;
-	// How are you going to make it immutable, so that it only gets one final
-	// number?
-	// (Hint: did you see the hint?)
+	// Cycle has a newFrameNumber tracking the next frame number
 	private static int newFrameNumber = 0;
+	// A cycle has a make, that is immutable
+	final private String make;
+	// A cycle has a unique frame number, that is *immutable*;
 	final private int frameNumber;
 
-	// A cycle has a make, that is immutable
-	// TODO:
 	/**
 	 * 
 	 * @param String newMake

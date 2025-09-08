@@ -1,6 +1,7 @@
 package edu.sdmesa.cisc191;
 
 import java.awt.Color;
+
 import edu.gatech.cc.DigitalPicture;
 import edu.gatech.cc.Pixel;
 
@@ -30,6 +31,42 @@ import edu.gatech.cc.Pixel;
  * 
  */
 public class Logic {
+
+	public static void exampleArray() {
+		char letterA = 'a';
+		char letterB = 'b';
+
+		char[] letters = new char[2];
+
+		letters[0] = letterA;
+		letters[1] = letterB;
+
+		for (char letter : letters) {
+			System.out.println(letter);
+		}
+
+		char[][] letterMatrix = new char[1][2];
+
+		letterMatrix[0][0] = letterA;
+		letterMatrix[0][1] = letterB;
+
+		for (char[] row : letterMatrix) {
+			for (char letter : row) {
+				System.out.println(letter);
+			}
+		}
+
+	}
+
+	public static char[] testCharArray(char[][] incomingArray) {
+		for (char[] row)
+		for (char letter : incomingArray) {
+			System.err.println(letter);
+		}
+
+		return incomingArray;
+	}
+
 	/**
 	 * Alters the picture so that each pixel's blue channel has been zeroed out.
 	 * All

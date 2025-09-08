@@ -2,6 +2,23 @@ package cisc191.sdmesa.edu;
 
 import java.util.ArrayList;
 
+/**
+ * Lead Author(s):
+ * 
+ * @author Kiernan Beresford
+ * 
+ *         References:
+ *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
+ *         Problem Solving.
+ *         Retrieved from
+ *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ * 
+ * 
+ *         Version/date: 9/3/25
+ * 
+ *         Responsibilities of class:
+ *         Track current cycle inventory for the bike shop
+ */
 public class BikeShop {
     private String name;
     private ArrayList<Cycle> inventory = new ArrayList<>();
@@ -10,14 +27,29 @@ public class BikeShop {
         this.name = name;
     }
 
+    /**
+     * Purpose: get the bike shops's
+     * 
+     * @return String
+     */
     public String getName() {
         return this.name;
     }
 
+    /**
+     * Purpose: add the given cycle to the inventory
+     * 
+     * @param Cycle cycle
+     */
     public void addToInventory(Cycle cycle) {
         this.inventory.add(cycle);
     }
 
+    /**
+     * Purpose: Current size of the inventory
+     * 
+     * @return int
+     */
     public int getNumberOfBikesInInventory() {
         return this.inventory.size();
     }

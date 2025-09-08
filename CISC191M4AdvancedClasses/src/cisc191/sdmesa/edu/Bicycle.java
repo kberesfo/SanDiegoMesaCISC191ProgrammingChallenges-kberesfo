@@ -18,7 +18,12 @@ import java.awt.Color;
  *         Version/date: 9/3/25
  * 
  *         Responsibilities of class:
- *         A a Bicycle is a Cycle with two wheels
+ *         A Bicycle is a Cycle with two wheels
+ *         A Bicycle is:
+ *         - Gearable
+ *         - Movable
+ * 
+ * 
  */
 
 // TODO: Implement and comment all IS-A (inheritance) and IS (implements)
