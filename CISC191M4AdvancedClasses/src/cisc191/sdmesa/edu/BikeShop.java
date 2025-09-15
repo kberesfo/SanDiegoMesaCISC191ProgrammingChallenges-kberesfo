@@ -14,10 +14,14 @@ import java.util.ArrayList;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 9/3/25
+ *         Version/date: 9/14/25
  * 
  *         Responsibilities of class:
- *         Track current cycle inventory for the bike shop
+ *         - Store the name of the bike shop
+ *         - Maintain an inventory of Cycle objects
+ *         - Add cycles to the inventory
+ *         - Provide the current inventory size
+ *         - Return a string representation of the shop and its inventory
  */
 public class BikeShop {
     private String name;

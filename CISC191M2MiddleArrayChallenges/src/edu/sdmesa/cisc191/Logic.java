@@ -31,8 +31,12 @@ import edu.gatech.cc.Pixel;
  * 
  */
 public class Logic {
-
-	public static void exampleArray() {
+	/**
+	 * Purpose: demonstrate returning an array and using it.
+	 * 
+	 * @return char[]
+	 */
+	public static char[] exampleArray() {
 		char letterA = 'a';
 		char letterB = 'b';
 
@@ -55,16 +59,8 @@ public class Logic {
 				System.out.println(letter);
 			}
 		}
-
-	}
-
-	public static char[] testCharArray(char[][] incomingArray) {
-		for (char[] row)
-		for (char letter : incomingArray) {
-			System.err.println(letter);
-		}
-
-		return incomingArray;
+		// return the array
+		return letters;
 	}
 
 	/**

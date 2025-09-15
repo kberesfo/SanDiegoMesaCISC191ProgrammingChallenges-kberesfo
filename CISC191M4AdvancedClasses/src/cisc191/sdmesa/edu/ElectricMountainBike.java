@@ -19,17 +19,16 @@ import java.awt.Color;
  *         Retrieved from
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- *         <<add more references here>>
  * 
- *         Version/date:
+ *         Version/date: 9/14/25
  * 
  *         Responsibilities of class:
- *         ElectricMountainBike is a Bicyle that is Movable, Gearable, and
- *         Electric
+ *         - ElectricMountainBike models an electric mountain bike with color,
+ *         gear, speed, and charge state.
+ *         - It supports changing gears, adjusting speed, charging the battery,
+ *         and painting the bike.
+ *         - Implements Gearable and Chargeable interfaces, and extends Cycle.
  */
-
-// TODO: Implement and comment all IS-A (inheritance) and IS (implements)
-// relationships separately
 
 public class ElectricMountainBike extends Cycle implements Gearable, Chargeable {
 	// has-a color

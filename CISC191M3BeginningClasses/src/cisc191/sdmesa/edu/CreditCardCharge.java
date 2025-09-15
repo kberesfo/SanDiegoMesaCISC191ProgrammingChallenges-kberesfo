@@ -16,7 +16,13 @@ package cisc191.sdmesa.edu;
  *         Version/date: 8/27/25
  * 
  *         Responsibilities of class:
- * 
+ *         - Represents a credit card charge with properties like year, month,
+ *         day, boat, purchased from, and card
+ *         - Manages credit card charge details through Boat and CreditCard
+ *         objects
+ *         - Provides methods to get charge information and card details
+ *         - Implements toString method for string representation of credit card
+ *         charge information
  */
 public class CreditCardCharge {
     // has-a year

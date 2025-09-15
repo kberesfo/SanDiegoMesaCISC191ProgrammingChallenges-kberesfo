@@ -16,7 +16,11 @@ package cisc191.sdmesa.edu;
  *         Version/date: 8/27/25
  * 
  *         Responsibilities of class:
- * 
+ *         - Represents a person with properties like name, phone number, and
+ *         zip code
+ *         - Provides methods to get and set person details
+ *         - Implements toString method for string representation of person
+ *         information
  */
 public class Person {
     // has-a name

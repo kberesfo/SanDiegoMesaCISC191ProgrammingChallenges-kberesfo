@@ -1,4 +1,5 @@
 package edu.sdmesa.cisc191;
+
 /**
  * Lead Author(s):
  * 
@@ -24,25 +25,32 @@ package edu.sdmesa.cisc191;
  */
 import java.util.ArrayList;
 
-public class StringArrayListProducer implements Producer<String>
-{
+public class StringArrayListProducer implements Producer<String> {
 	// An ArrayListConsumer has-many Strings
-	// private TODO
+	private ArrayList<String> list;
 
-	public StringArrayListProducer(ArrayList<String> initialStrings) 
-	{
-		// TODO 
+	public StringArrayListProducer(ArrayList<String> initialStrings) {
+		this.list = initialStrings;
 	}
 
+	/**
+	 * Purpose: 
+	 * 
+	 * @param String item
+	 */
 	@Override
-	public void produce(String item)
-	{
-		// TODO Add item to collection
+	public void produce(String item) {
+		this.list.add(item);
 	}
 
-	public void produce(int index, String newString)
-	{
-		// TODO 
+	/**
+	 * Purpose:
+	 * 
+	 * @param int    index
+	 * @param String newString
+	 */
+	public void produce(int index, String newString) {
+		this.list.add(index, newString);
 	}
 
 }

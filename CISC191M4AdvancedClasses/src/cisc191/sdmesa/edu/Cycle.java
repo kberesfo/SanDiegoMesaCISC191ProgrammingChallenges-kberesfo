@@ -15,10 +15,19 @@ import java.awt.Color;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 9/3/25
+ *         Version/date: 9/14/25
  * 
  *         Responsibilities of class:
- *         
+ *         - Represent a generic cycle (e.g., bicycle, tricycle, etc.) with
+ *         common properties.
+ *         - Track and assign a unique, immutable frame number to each cycle
+ *         instance.
+ *         - Store the make/brand of the cycle as an immutable property.
+ *         - Define abstract methods for wheel count, color retrieval, and color
+ *         modification, to be implemented by subclasses.
+ *         - Provide accessors for make and frame number.
+ *         - Implement equality based on frame number uniqueness.
+ *         - Provide a string representation including frame number.
  */
 
 public abstract class Cycle {

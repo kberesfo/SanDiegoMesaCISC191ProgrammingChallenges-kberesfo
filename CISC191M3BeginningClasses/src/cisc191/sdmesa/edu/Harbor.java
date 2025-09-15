@@ -16,7 +16,11 @@ package cisc191.sdmesa.edu;
  *         Version/date: 8/27/25
  * 
  *         Responsibilities of class:
- * 
+ *         - Manages a collection of Boat objects in a harbor
+ *         - Provides methods to park and retrieve boats from specific slips
+ *         - Supports getting a complete inventory of boats in the harbor
+ *         - Implements toString method for string representation of harbor
+ *         inventory
  */
 public class Harbor {
     // has many boats

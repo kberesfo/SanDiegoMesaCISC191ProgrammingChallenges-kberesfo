@@ -7,9 +7,6 @@ import java.awt.Color;
  * 
  * @author Kiernan Beresford
  * 
- *         Other contributors:
- *         <<add additional contributors (mentors, tutors, friends) here, with
- *         contact information>>
  * 
  *         References:
  *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
@@ -17,12 +14,21 @@ import java.awt.Color;
  *         Retrieved from
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- *         <<add more references here>>
  * 
  *         Version/date: 8/27/25
  * 
  *         Responsibilities of class:
- * 
+ *         - Represents a boat with properties like make, color, speed, price,
+ *         and serial number
+ *         - Manages boat ownership and captain assignment through Person
+ *         objects
+ *         - Provides methods to control boat speed (speedUp, slowDown)
+ *         - Generates unique serial numbers for each boat instance
+ *         - Supports multiple constructors for different initialization
+ *         scenarios
+ *         - Provides getter and setter methods for boat properties
+ *         - Implements toString method for string representation of boat
+ *         information
  */
 
 public class Boat {
@@ -43,6 +49,9 @@ public class Boat {
 	// has-a Person (captain)
 	private Person captain;
 
+	/**
+	 * Purpose: Default constructor
+	 */
 	Boat() {
 		// set defaults here
 		this.make = null;
@@ -104,6 +113,7 @@ public class Boat {
 
 	/**
 	 * Purpose: decreases the instance's speed
+	 * 
 	 */
 	public void slowDown() {
 		this.speed = Math.max(0, this.speed - 1);

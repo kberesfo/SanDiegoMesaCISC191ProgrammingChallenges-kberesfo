@@ -16,7 +16,12 @@ package cisc191.sdmesa.edu;
  *         Version/date: 8/27/25
  * 
  *         Responsibilities of class:
- * 
+ *         - Represents a credit card with properties like card number,
+ *         expiration date, pin, and owner
+ *         - Manages credit card ownership through Person objects
+ *         - Provides methods to get card information and owner details
+ *         - Implements toString method for string representation of credit card
+ *         information
  */
 public class CreditCard {
     // has-a card number

@@ -12,9 +12,13 @@ package cisc191.sdmesa.edu;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 9/3/25
+ *         Version/date: 9/14/25
  * 
- *         Responsibilities of class:
+ *         Responsibilities of interface:
+ *         - Define methods for objects that can move and change speed.
+ *         - Specify contract for getting current speed, speeding up, and
+ *         slowing down.
+ *         - Ensure implementing classes provide movement-related functionality.
  * 
  */
 

@@ -7,7 +7,6 @@ import java.awt.Color;
  * 
  * @author Kiernan Beresford
  * 
- * 
  *         References:
  *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
  *         Problem Solving.
@@ -15,19 +14,16 @@ import java.awt.Color;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 9/3/25
+ *         Version/date: 9/14/25
  * 
- *         Responsibilities of class:
- *         A Bicycle is a Cycle with two wheels
- *         A Bicycle is:
- *         - Gearable
- *         - Movable
- * 
- * 
+ *         Responsibilities of class:	
+ *         - Represents a bicycle that inherits from Cycle class
+ *         - Manages bicycle properties like color, gear, and speed
+ *         - Provides methods to change gears and control movement
+ *         - Implements Gearable interface for gear operations
+ *         - Implements Movable interface for speed control
+ *         - Supports basic bicycle operations like painting and getting wheel count
  */
-
-// TODO: Implement and comment all IS-A (inheritance) and IS (implements)
-// relationships separately
 
 public class Bicycle extends Cycle implements Gearable, Movable {
 	// has-a color

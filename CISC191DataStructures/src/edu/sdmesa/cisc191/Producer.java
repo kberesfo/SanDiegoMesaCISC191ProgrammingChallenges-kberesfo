@@ -1,9 +1,8 @@
 package edu.sdmesa.cisc191;
 
-public interface Producer<Item>
-{
+public interface Producer<T> {
 	/**
 	 * Adds an element from the collection; making it available for consumption.
 	 */
-	public void produce(Item item);
+	public void produce(T item);
 }

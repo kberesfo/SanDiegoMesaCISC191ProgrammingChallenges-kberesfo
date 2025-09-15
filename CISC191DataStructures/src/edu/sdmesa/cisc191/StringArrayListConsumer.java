@@ -1,4 +1,5 @@
 package edu.sdmesa.cisc191;
+
 /**
  * Lead Author(s):
  * 
@@ -23,23 +24,30 @@ package edu.sdmesa.cisc191;
  * 
  */
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 
-public class StringArrayListConsumer implements Consumer<String>
-{
+public class StringArrayListConsumer implements Consumer<String> {
 	// An ArrayListConsumer has-many Strings
-	// private TODO
+	private ArrayList<String> list;
 
-	public StringArrayListConsumer(ArrayList<String> initialStrings) 
-	{
-		// TODO
+	public StringArrayListConsumer(ArrayList<String> initialStrings) {
+		this.list = initialStrings;
 	}
 
+	/**
+	 * Purpose: Pop left from the array list
+	 * 
+	 * @return String
+	 */
 	@Override
-	public String consume() 
-	{
-		// TODO: Remove a String from collection
-		return null;
+	public String consume() {
+		try {
+			return this.list.removeFirst();
+		} catch (NoSuchElementException e) {
+			// if element exception return null
+			return null;
+
+		}
 
 	}
-
 }
