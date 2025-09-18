@@ -30,7 +30,6 @@ import java.awt.Color;
  *         - Implements toString method for string representation of boat
  *         information
  */
-
 public class Boat {
 	// the class serial counter
 	private static int nextSerialNumber = 0;
