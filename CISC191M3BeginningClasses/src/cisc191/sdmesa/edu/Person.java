@@ -13,7 +13,7 @@ package cisc191.sdmesa.edu;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 8/27/25
+ *         Version/date: 9/18/25
  * 
  *         Responsibilities of class:
  *         - Represents a person with properties like name, phone number, and
@@ -23,11 +23,9 @@ package cisc191.sdmesa.edu;
  *         information
  */
 public class Person {
-    // has-a name
+    // instance vars
     private String name;
-    // has-a phone number
     private String phoneNumber;
-    // has-a zip code
     private String zipCode;
 
     Person(String name, String phoneNumber, String zipCode) {
@@ -39,7 +37,7 @@ public class Person {
     /**
      * Purpose: get the current name
      * 
-     * @return String
+     * @return the name of the person
      */
     public String getName() {
         return this.name;
@@ -48,7 +46,7 @@ public class Person {
     /**
      * Purpose: set a new name
      * 
-     * @param String name
+     * @param name set the name of the person
      */
     public void setName(String name) {
         this.name = name;
@@ -57,7 +55,7 @@ public class Person {
     /**
      * Purpose: get the current phone number
      * 
-     * @return String
+     * @return the
      */
     public String getPhoneNumber() {
         return this.phoneNumber;
@@ -66,7 +64,7 @@ public class Person {
     /**
      * Purpose: set a new phone number
      * 
-     * @param String phoneNumber
+     * @param phoneNumber set a new phone number for the person
      */
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
@@ -75,7 +73,7 @@ public class Person {
     /**
      * Purpose: get the current zipcode
      * 
-     * @return String
+     * @return get the person's zipcode
      */
     public String getZipCode() {
         return this.zipCode;
@@ -84,12 +82,15 @@ public class Person {
     /**
      * Purpose: zet a new zipcode
      * 
-     * @param zipCode
+     * @param zipCode set the persons zipcode
      */
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
 
+    /**
+     * Purpose: display this person's information as a string
+     */
     @Override
     public String toString() {
         return String.format(

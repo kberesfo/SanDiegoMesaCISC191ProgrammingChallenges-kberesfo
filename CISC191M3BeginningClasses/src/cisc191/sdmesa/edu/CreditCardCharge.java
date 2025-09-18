@@ -13,7 +13,7 @@ package cisc191.sdmesa.edu;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 8/27/25
+ *         Version/date: 9/18/25
  * 
  *         Responsibilities of class:
  *         - Represents a credit card charge with properties like year, month,
@@ -25,11 +25,9 @@ package cisc191.sdmesa.edu;
  *         charge information
  */
 public class CreditCardCharge {
-    // has-a year
+    // instance vars
     private int year;
-    // has-a month
     private int month;
-    // has-a day
     private int day;
     // has-a boat
     private Boat boat;
@@ -40,12 +38,12 @@ public class CreditCardCharge {
 
     /**
      * 
-     * @param year
-     * @param month
-     * @param day
-     * @param boat
-     * @param purchasedFrom
-     * @param card
+     * @param year          the year of the charge
+     * @param month         the month of the charge
+     * @param day           the current day
+     * @param boat          the boat being purchased
+     * @param purchasedFrom the store the boat was purchased from
+     * @param card          the card used to purchase the boat
      */
     CreditCardCharge(int year, int month, int day, Boat boat, String purchasedFrom, CreditCard card) {
         this.year = year;
@@ -56,6 +54,9 @@ public class CreditCardCharge {
         this.card = card;
     }
 
+    /**
+     * Purpose: display the charge on the card as a string
+     */
     @Override
     public String toString() {
         // create a new string builder

@@ -13,7 +13,7 @@ package cisc191.sdmesa.edu;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 8/27/25
+ *         Version/date: 9/18/25
  * 
  *         Responsibilities of class:
  *         - Represents a credit card with properties like card number,
@@ -24,21 +24,19 @@ package cisc191.sdmesa.edu;
  *         information
  */
 public class CreditCard {
-    // has-a card number
-    private String cardNumber;
-    // has-a expiration date
+    // instance vars
     private String expDate;
-    // has-a pin
     private String pin;
+    private String cardNumber;
     // has-a Person owner
     private Person owner;
 
     /**
      * 
-     * @param String cardNumber
-     * @param String expDate
-     * @param String pin
-     * @param Person owner
+     * @param cardNumber the card number for the credit card
+     * @param expDate    the expiration date of the credit card
+     * @param pin        the pin for the credit card
+     * @param Person     the owner of the credit card
      */
     CreditCard(String cardNumber, String expDate, String pin, Person owner) {
         this.cardNumber = cardNumber;
@@ -47,6 +45,9 @@ public class CreditCard {
         this.owner = owner;
     }
 
+    /**
+     * Purpose: Display the credit card as a string.
+     */
     @Override
     public String toString() {
         // format the card info

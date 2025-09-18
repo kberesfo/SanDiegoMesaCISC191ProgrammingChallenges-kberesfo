@@ -13,7 +13,7 @@ package cisc191.sdmesa.edu;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 8/27/25
+ *         Version/date: 9/18/25
  * 
  *         Responsibilities of class:
  *         - Manages a collection of Boat objects in a harbor
@@ -23,11 +23,13 @@ package cisc191.sdmesa.edu;
  *         inventory
  */
 public class Harbor {
-    // has many boats
+    // has-many boats
     private Boat[] inventory;
 
     /**
-     * @param int numberOfSlips
+     * Purpose: Create a new harbor with number of slips
+     * 
+     * @param numberOfSlips the number of slips this harbor has
      */
     Harbor(int numberOfSlips) {
         this.inventory = new Boat[numberOfSlips];
@@ -36,8 +38,8 @@ public class Harbor {
     /**
      * Purpose: Park a boat at a slip
      * 
-     * @param Boat boat
-     * @param int  slipNumber
+     * @param boat       the boat parking at the slip
+     * @param slipNumber the slip number the boat is parking at
      */
     public Boat parkBoatAt(Boat boat, int slipNumber) {
         // if a boat is already in the slip get it
@@ -51,8 +53,8 @@ public class Harbor {
     /**
      * Purpose: Return the boat parked at a slip
      * 
-     * @param int slipNumber
-     * @return Boat | null
+     * @param slipNumber the slip to check
+     * @return returns the boat parked at the slip or null
      */
     public Boat getBoatAt(int slipNumber) {
         return this.inventory[slipNumber];
@@ -62,7 +64,7 @@ public class Harbor {
      * Purpose return a carbon copy of the current boat slip
      * this could be made better by creating mutable copies of the boats as well
      * 
-     * @return boat[]
+     * @return returns a copy of the boats parked at the harbor
      */
     public Boat[] getInventory() {
         // initialize a new array with the same length as old array

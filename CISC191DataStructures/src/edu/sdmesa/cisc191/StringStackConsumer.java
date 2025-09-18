@@ -1,7 +1,6 @@
 package edu.sdmesa.cisc191;
 
 import java.util.EmptyStackException;
-import java.util.NoSuchElementException;
 import java.util.Stack;
 
 public class StringStackConsumer implements Consumer<String> {

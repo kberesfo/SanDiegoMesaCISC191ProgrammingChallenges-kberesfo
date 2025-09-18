@@ -15,7 +15,7 @@ import java.awt.Color;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 8/27/25
+ *         Version/date: 9/18/25
  * 
  *         Responsibilities of class:
  *         - Represents a boat with properties like make, color, speed, price,
@@ -32,18 +32,15 @@ import java.awt.Color;
  */
 
 public class Boat {
-	// the class
+	// the class serial counter
 	private static int nextSerialNumber = 0;
-	// has-a make
+	// instance vars
+	private int speed;
+	private int price;
 	private String make;
+	private int serialNumber;
 	// has-a color
 	private Color color;
-	// has-a speed
-	private int speed;
-	// has-a price
-	private int price;
-	// has-a serialNumber
-	private int serialNumber;
 	// has-a Person (owner)
 	private Person owner;
 	// has-a Person (captain)
@@ -63,8 +60,8 @@ public class Boat {
 
 	/**
 	 *
-	 * @param String make
-	 * @param Color  color
+	 * @param make  the make of the boat
+	 * @param color color of the boat
 	 */
 	Boat(String make, Color color) {
 		this();
@@ -74,7 +71,7 @@ public class Boat {
 
 	/**
 	 * 
-	 * @param Boat boat
+	 * @param boat an instance of the boat to copy
 	 */
 	Boat(Boat boat) {
 		this();
@@ -87,7 +84,7 @@ public class Boat {
 	/**
 	 * Purpose: create a new unique serial number
 	 * 
-	 * @return int
+	 * @return the next boat serial number
 	 */
 	public static Integer createNewSerialNumber() {
 		// increment then return
@@ -97,7 +94,7 @@ public class Boat {
 	/**
 	 * Purpose: Return the instances serial number
 	 * 
-	 * @return int
+	 * @return the boats serial number
 	 */
 	public int getSerialNumber() {
 		return this.serialNumber;
@@ -122,7 +119,7 @@ public class Boat {
 	/**
 	 * Purpose: Get the make of the boat
 	 * 
-	 * @return String
+	 * @return the boats make
 	 */
 	public String getMake() {
 		// accessor
@@ -132,7 +129,7 @@ public class Boat {
 	/**
 	 * Purpose: Get the color
 	 * 
-	 * @return Color
+	 * @return the color of the boat
 	 */
 	public Color getColor() {
 		return this.color;
@@ -141,7 +138,7 @@ public class Boat {
 	/**
 	 * Purpose: Set the color
 	 * 
-	 * @param color
+	 * @param color the color to paint the boat
 	 */
 	public void setColor(Color color) {
 		this.color = color;
@@ -150,7 +147,7 @@ public class Boat {
 	/**
 	 * Purpose: get the speed
 	 * 
-	 * @return int
+	 * @return boats current speed
 	 */
 	public int getSpeed() {
 		return this.speed;
@@ -159,7 +156,7 @@ public class Boat {
 	/**
 	 * Purpose: get the price
 	 *
-	 * @return int
+	 * @return get the boats price
 	 */
 	public int getPrice() {
 		return this.price;
@@ -168,7 +165,7 @@ public class Boat {
 	/**
 	 * Purpose: set the price
 	 * 
-	 * @param price
+	 * @param price set the boats price
 	 */
 	public void setPrice(int price) {
 		this.price = price;
@@ -177,7 +174,7 @@ public class Boat {
 	/**
 	 * Purpose: Get the current owner
 	 * 
-	 * @return Person
+	 * @return get the boats owner
 	 */
 	public Person getOwner() {
 		return this.owner;
@@ -186,7 +183,7 @@ public class Boat {
 	/**
 	 * Purpose: Set the current owner
 	 * 
-	 * @param Person owner
+	 * @param owner set the boats owner
 	 */
 	public void setOwner(Person owner) {
 		this.owner = owner;
@@ -195,7 +192,7 @@ public class Boat {
 	/**
 	 * Purpose: get the current captain
 	 * 
-	 * @return Person captain
+	 * @return get the boats current captain
 	 */
 	public Person getCaptain() {
 		return this.captain;
@@ -204,14 +201,14 @@ public class Boat {
 	/**
 	 * Purpose: set a new captain for the boat
 	 * 
-	 * @param Person captain
+	 * @param captain set the boats current
 	 */
 	public void setCaptain(Person captain) {
 		this.captain = captain;
 	}
 
 	/**
-	 * Purpose: display the
+	 * Purpose: display the boat as a string.
 	 */
 	@Override
 	public String toString() {

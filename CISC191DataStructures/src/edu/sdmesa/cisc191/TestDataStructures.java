@@ -235,7 +235,7 @@ class TestDataStructures {
 
 		assertTrue(goggles.search("ice cream").contains("http://notyourmothersicecream.com"));
 		assertTrue(goggles.search("ice cream").contains("http://mothersicecream.com"));
-		assertFalse(goggles.search("ice	cream").contains("http://foundontheroaddead.com"));
+		assertFalse(goggles.search("ice cream").contains("http://foundontheroaddead.com")); // NOTE: this contains white space errors
 		assertFalse(goggles.search("ice cream").contains("http://fancycar.com"));
 		assertFalse(goggles.search("ice cream").contains("http://cashanddrive.com"));
 

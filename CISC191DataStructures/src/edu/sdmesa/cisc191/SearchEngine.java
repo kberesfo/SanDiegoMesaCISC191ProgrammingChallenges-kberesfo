@@ -1,44 +1,58 @@
 package edu.sdmesa.cisc191;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Hashtable;
 
 public class SearchEngine {
-    Map<String, ArrayList<GoggleResult>> resultsMap;
+    // has-a hashtable of many strings
+    Hashtable<String, ArrayList<String>> resultsMap;
 
-    public class GoggleResult {
-        private String hyperlink;
-
-        GoggleResult(String hyperlink) {
-            this.hyperlink = hyperlink;
-        }
-
-        public String getHyperlink() {
-            return this.hyperlink;
-        }
-
-    }
-
+    /**
+     * 
+     */
     SearchEngine() {
-        this(new HashMap<>());
+        this(new Hashtable<String, ArrayList<String>>());
     }
 
-    SearchEngine(Map<String, ArrayList<GoggleResult>> resultsMap) {
+    /**
+     * 
+     * @param resultsMap
+     */
+    SearchEngine(Hashtable<String, ArrayList<String>> resultsMap) {
         this.resultsMap = resultsMap;
     }
 
+    /**
+     * 
+     * @param keyword
+     * @param hyperlink
+     */
     public void add(String keyword, String hyperlink) {
+
         if (this.resultsMap.containsKey(keyword)) {
-            this.resultsMap.get(keyword).add(new GoggleResult(hyperlink));
+            this.resultsMap.get(keyword).add(hyperlink);
             return;
         }
-
-        this.resultsMap.put(keyword, new ArrayList<GoggleResult>(new GoggleResult(hyperlink)));
+        ArrayList<String> list = new ArrayList<String>();
+        list.add(hyperlink);
+        this.resultsMap.put(keyword, list);
     }
 
-    public ArrayList<GoggleResult> search(String keyword) {
-        if (this.resultsMap.containsKey(keyword))
-            return this.resultsMap.get(keyword);
+    /**
+     * 
+     * @param keyword
+     * @return
+     */
+    public ArrayList<String> search(String keyword) {
+        if (this.resultsMap.containsKey(keyword)) {
+            ArrayList<String> list = new ArrayList<String>();
+
+            for (String result : this.resultsMap.get(keyword))
+                list.add(result);
+
+            return list;
+        }
+
+        return new ArrayList<String>();
     }
 }

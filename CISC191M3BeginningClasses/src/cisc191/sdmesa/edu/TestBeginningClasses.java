@@ -135,7 +135,9 @@ class TestBeginningClasses {
 	void testCreateNewSerialNumber() {
 		// The boat class creates a unique serial numbers for each boat
 		// See Java Static Variables in
-		https: // beginnersbook.com/2013/04/java-static-class-block-methods-variables/
+		/*
+		 * https://beginnersbook.com/2013/04/java-static-class-block-methods-variables/
+		 */
 		assertTrue(Boat.createNewSerialNumber() > 0);
 		// Serial numbers are monotonically increasing
 		assertTrue(Boat.createNewSerialNumber() < Boat.createNewSerialNumber());
