@@ -12,7 +12,7 @@ package cisc191.sdmesa.edu;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 9/14/25
+ *         Version/date: 9/21/25
  * 
  *         Responsibilities of interface:
  *         - Define methods for getting the current gear.
@@ -23,18 +23,19 @@ package cisc191.sdmesa.edu;
 public interface Gearable {
 
 	/**
+	 * Purpose: get the gear of the object
 	 * 
 	 * @return the gear that object is currently in
 	 */
 	int getGear();
 
 	/**
-	 * Purpose: Decrease the gear
+	 * Purpose: decrease the gear of the object
 	 */
 	void gearDown();
 
 	/**
-	 * Purpose: Increase the gear
+	 * Purpose: increase the gear of the object
 	 */
 	void gearUp();
 }

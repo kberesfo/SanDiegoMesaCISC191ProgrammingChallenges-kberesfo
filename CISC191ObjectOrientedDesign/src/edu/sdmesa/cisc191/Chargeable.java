@@ -2,7 +2,7 @@ package edu.sdmesa.cisc191;
 
 /**
  * Lead Author(s):
- * @author 
+ * @author Kiernan Beresford
  * @author 
  * <<add additional lead authors here, with a full first and last name>>
  * 

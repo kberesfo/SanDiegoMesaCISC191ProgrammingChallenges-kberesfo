@@ -12,21 +12,25 @@ package cisc191.sdmesa.edu;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 9/14/25
+ *         Version/date: 9/21/25
  * 
  *         Responsibilities of class:
  *         - Represents a chargeable object that extends Movable interface
  *         - Provides methods to get the charge of the object
- *         - Implements the chargeTo method to set the charge of the object 
+ *         - Implements the chargeTo method to set the charge of the object
  */
 public interface Chargeable extends Movable {
-    // instance var
+    /**
+     * Purpose: return the current charge
+     * 
+     * @return the current charge
+     */
     int getCharge();
 
     /**
-     * Purpose:
+     * Purpose: Update the charge of the Chargeable
      * 
-     * @param int charge
+     * @param charge update the charge
      */
     void chargeTo(int charge);
 }

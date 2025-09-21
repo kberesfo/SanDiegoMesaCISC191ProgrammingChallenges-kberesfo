@@ -14,7 +14,7 @@ import java.awt.Color;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 9/14/25
+ *         Version/date: 9/21/25
  * 
  *         Responsibilities of class:
  *         - Represent a unicycle, which is a type of Cycle with only one wheel.
@@ -28,14 +28,13 @@ import java.awt.Color;
  *         wheels, color management).
  */
 public class Unicycle extends Cycle implements Movable {
+	private int speed;
 	// has-a color
 	private Color color;
-	// has-a speed
-	private int speed;
 
 	/**
 	 * 
-	 * @param String make
+	 * @param make the make of the unicycle
 	 */
 	Unicycle(String make) {
 		super(make);
@@ -44,7 +43,7 @@ public class Unicycle extends Cycle implements Movable {
 	/**
 	 * Purpose: return the number of wheels
 	 * 
-	 * @return int
+	 * @return the number of wheels of the unicycle
 	 */
 	public int getNumberOfWheels() {
 		return 1;
@@ -53,7 +52,7 @@ public class Unicycle extends Cycle implements Movable {
 	/**
 	 * Purpose: Paint the cycle
 	 * 
-	 * @param Color color
+	 * @param color the color to paint the unicycle
 	 */
 	public void setColor(Color color) {
 		this.color = color;
@@ -62,28 +61,44 @@ public class Unicycle extends Cycle implements Movable {
 	/**
 	 * Purpose: get the current color of the cycle
 	 * 
-	 * @return Color
+	 * @return the color of the unicycle
 	 */
 	public Color getColor() {
 		return this.color;
 	}
 
+	/**
+	 * Purpose: return a string representation of the unicycle
+	 * 
+	 * @return a string representation of the unicycle
+	 */
 	@Override
 	public String toString() {
 		return String.format("%s %s", this.getMake(), super.toString());
 	}
 
+	/**
+	 * Purpose: get the speed of the unicycle
+	 * 
+	 * @return the speed of the unicycle
+	 */
 	@Override
 	public int getSpeed() {
 		return this.speed;
 	}
 
+	/**
+	 * Purpose: decrease the speed of the unicycle
+	 */
 	@Override
 	public void slowDown() {
 		this.speed = Math.max(0, --this.speed);
 
 	}
 
+	/**
+	 * Purpose: increase the speed of the unicycle
+	 */
 	@Override
 	public void speedUp() {
 		this.speed++;

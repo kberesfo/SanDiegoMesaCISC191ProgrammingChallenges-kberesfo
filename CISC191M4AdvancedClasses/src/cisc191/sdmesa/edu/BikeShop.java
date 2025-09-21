@@ -14,7 +14,7 @@ import java.util.ArrayList;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 9/14/25
+ *         Version/date: 9/21/25
  * 
  *         Responsibilities of class:
  *         - Store the name of the bike shop
@@ -25,8 +25,14 @@ import java.util.ArrayList;
  */
 public class BikeShop {
     private String name;
+    // has many cycles
     private ArrayList<Cycle> inventory = new ArrayList<>();
 
+    /**
+     * Purpose: create a new bike shop
+     * 
+     * @param name the name of the bike shop
+     */
     BikeShop(String name) {
         this.name = name;
     }
@@ -34,7 +40,7 @@ public class BikeShop {
     /**
      * Purpose: get the bike shops's
      * 
-     * @return String
+     * @return the bike shop's name
      */
     public String getName() {
         return this.name;
@@ -43,7 +49,7 @@ public class BikeShop {
     /**
      * Purpose: add the given cycle to the inventory
      * 
-     * @param Cycle cycle
+     * @param cycle the cycle to add to the inventory
      */
     public void addToInventory(Cycle cycle) {
         this.inventory.add(cycle);
@@ -52,12 +58,17 @@ public class BikeShop {
     /**
      * Purpose: Current size of the inventory
      * 
-     * @return int
+     * @return number of bikes in the inventory
      */
     public int getNumberOfBikesInInventory() {
         return this.inventory.size();
     }
 
+    /**
+     * Purpose: return a string representation of the bike shop and its inventory
+     * 
+     * @return String representation of the bike shop and its inventory
+     */
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();

@@ -15,7 +15,7 @@ import java.awt.Color;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 9/14/25
+ *         Version/date: 9/21/25
  * 
  *         Responsibilities of class:
  *         - Represent a generic cycle (e.g., bicycle, tricycle, etc.) with
@@ -29,34 +29,38 @@ import java.awt.Color;
  *         - Implement equality based on frame number uniqueness.
  *         - Provide a string representation including frame number.
  */
-
 public abstract class Cycle {
-	// Cycle has a newFrameNumber tracking the next frame number
 	private static int newFrameNumber = 0;
-	// A cycle has a make, that is immutable
 	final private String make;
 	// A cycle has a unique frame number, that is *immutable*;
 	final private int frameNumber;
 
 	/**
+	 * Purpose: create a new cycle
 	 * 
-	 * @param String newMake
+	 * @param newMake the make of the cycle
 	 */
 	public Cycle(String newMake) {
 		this.make = newMake;
 		this.frameNumber = ++Cycle.newFrameNumber;
 	}
 
+	/**
+	 * Purpose: get the number of wheels of the cycle
+	 * 
+	 * @return the number of wheels of the cycle
+	 */
 	abstract int getNumberOfWheels();
 
 	/**
+	 * Purpose: get the color of the cycle
 	 * 
-	 * @return the color of the bike; can be null
+	 * @return the color of the cycle; can be null
 	 */
 	abstract Color getColor();
 
 	/**
-	 * Changes the color of the bike
+	 * Changes the color of the cycle
 	 * 
 	 * @param newColor
 	 */
@@ -64,15 +68,16 @@ public abstract class Cycle {
 
 	/**
 	 * 
-	 * @return make or brand that was set when the bike was made
+	 * @return make or brand that was set when the cycle was made
 	 */
 	public String getMake() {
 		return this.make;
 	}
 
 	/**
+	 * Purpose: get the frame number of the cycle
 	 * 
-	 * @return the unique serial number that was stamped in the frame when the bike
+	 * @return the unique serial number that was stamped in the frame when the cycle
 	 *         was made
 	 * @see https://www.eta.co.uk/bicycle-insurance/frequently-asked-questions/how-to-find-a-bicycle-frame-number/
 	 */
@@ -81,6 +86,8 @@ public abstract class Cycle {
 	}
 
 	/**
+	 * Purpose: check if the frame number are the same
+	 * 
 	 * @return true if the frame number are the same
 	 */
 	@Override
@@ -99,6 +106,8 @@ public abstract class Cycle {
 	}
 
 	/**
+	 * Purpose: return a string representation of the cycle
+	 * 
 	 * @return String describing the object, including type, make and frame number
 	 */
 	@Override

@@ -12,7 +12,7 @@ package cisc191.sdmesa.edu;
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 9/14/25
+ *         Version/date: 9/21/25
  * 
  *         Responsibilities of interface:
  *         - Define methods for objects that can move and change speed.
@@ -26,7 +26,7 @@ public interface Movable {
     /**
      * Purpose: get the current speed of the movable object
      * 
-     * @return int
+     * @return the current speed
      */
     int getSpeed();
 
