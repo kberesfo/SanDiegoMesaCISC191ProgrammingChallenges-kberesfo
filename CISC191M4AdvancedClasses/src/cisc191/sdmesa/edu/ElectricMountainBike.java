@@ -45,6 +45,7 @@ public class ElectricMountainBike extends Cycle implements Gearable, Chargeable 
 	 * 
 	 * @return the number of wheels of the electric mountain bike
 	 */
+	@Override
 	public int getNumberOfWheels() {
 		return 2;
 	}
@@ -54,6 +55,7 @@ public class ElectricMountainBike extends Cycle implements Gearable, Chargeable 
 	 * 
 	 * @param color the color to paint the electric mountain bike
 	 */
+	@Override
 	public void setColor(Color color) {
 		this.color = color;
 	}
@@ -63,6 +65,7 @@ public class ElectricMountainBike extends Cycle implements Gearable, Chargeable 
 	 * 
 	 * @return the current color of the electric mountain bike
 	 */
+	@Override
 	public Color getColor() {
 		return this.color;
 	}

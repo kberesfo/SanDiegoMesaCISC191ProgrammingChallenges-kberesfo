@@ -21,7 +21,6 @@ package cisc191.sdmesa.edu;
  *         classes.
  */
 public interface Gearable {
-
 	/**
 	 * Purpose: get the gear of the object
 	 * 
@@ -37,5 +36,5 @@ public interface Gearable {
 	/**
 	 * Purpose: increase the gear of the object
 	 */
-	void gearUp();
+	void gearUp(); 	
 }

@@ -45,6 +45,7 @@ public class Unicycle extends Cycle implements Movable {
 	 * 
 	 * @return the number of wheels of the unicycle
 	 */
+	@Override
 	public int getNumberOfWheels() {
 		return 1;
 	}
@@ -54,6 +55,7 @@ public class Unicycle extends Cycle implements Movable {
 	 * 
 	 * @param color the color to paint the unicycle
 	 */
+	@Override
 	public void setColor(Color color) {
 		this.color = color;
 	}
@@ -63,6 +65,7 @@ public class Unicycle extends Cycle implements Movable {
 	 * 
 	 * @return the color of the unicycle
 	 */
+	@Override
 	public Color getColor() {
 		return this.color;
 	}

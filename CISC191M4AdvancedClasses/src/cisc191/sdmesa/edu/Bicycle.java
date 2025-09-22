@@ -47,6 +47,7 @@ public class Bicycle extends Cycle implements Gearable, Movable {
 	 * 
 	 * @return the number of wheels
 	 */
+	@Override
 	public int getNumberOfWheels() {
 		return 2;
 	}
@@ -56,6 +57,7 @@ public class Bicycle extends Cycle implements Gearable, Movable {
 	 * 
 	 * @param color the color to paint the cycle
 	 */
+	@Override
 	public void setColor(Color color) {
 		this.color = color;
 	}
@@ -65,6 +67,7 @@ public class Bicycle extends Cycle implements Gearable, Movable {
 	 * 
 	 * @return the current color of the cycle
 	 */
+	@Override
 	public Color getColor() {
 		return this.color;
 	}
@@ -84,6 +87,7 @@ public class Bicycle extends Cycle implements Gearable, Movable {
 	 * 
 	 * @return the gear that the bicycle is currently in
 	 */
+	@Override
 	public int getGear() {
 		return this.gear;
 	};
