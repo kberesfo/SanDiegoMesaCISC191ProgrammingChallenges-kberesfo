@@ -4,6 +4,27 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
+/**
+ * Lead Author(s):
+ * 
+ * @author Kiernan Beresford
+ * 
+ * 
+ *         References:
+ *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
+ *         Problem Solving.
+ *         Retrieved from
+ *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ * 
+ * 
+ *         Version/date: 9/18/25
+ * 
+ *         Responsibilities of class:
+ *         - Represents a palindrome
+ *         - Checks if a word is a palindrome
+ *         - Returns true if the word is a palindrome
+ *         - Returns false if the word is not a palindrome
+ */
 public class Palindrome {
 	public static boolean isPalindrome(char[] letters) {
 		// Use a Queue and a Stack to see if the letters

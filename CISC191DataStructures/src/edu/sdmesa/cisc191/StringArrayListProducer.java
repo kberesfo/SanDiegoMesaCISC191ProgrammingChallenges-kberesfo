@@ -1,42 +1,44 @@
 package edu.sdmesa.cisc191;
 
+import java.util.ArrayList;
+
 /**
  * Lead Author(s):
  * 
- * @author
- * @author
- *         <<add additional lead authors here, with a full first and last name>>
+ * @author Kiernan Beresford
  * 
- * Other contributors:
- *         <<add additional contributors (mentors, tutors, friends) here, with
- *         contact information>>
  * 
- * References:
- *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
+ *         References:
+ *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
+ *         Problem Solving.
  *         Retrieved from
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- *         <<add more references here>>
  * 
- * Version/date:
+ *         Version/date: 9/22/25
  * 
- * Responsibilities of class:
- * 
+ *         Responsibilities of class:
+ *         - Represents a producer that produces strings
+ *         - Implements the Producer interface
+ *         - Uses an ArrayList to store the strings
  */
-import java.util.ArrayList;
-
 public class StringArrayListProducer implements Producer<String> {
 	// An ArrayListConsumer has-many Strings
 	private ArrayList<String> list;
 
+	/**
+	 * Purpose: create a new String array list producer
+	 * 
+	 * @param initialStrings the initial strings to produce
+	 */
 	public StringArrayListProducer(ArrayList<String> initialStrings) {
 		this.list = initialStrings;
 	}
 
 	/**
-	 * Purpose: 
+	 * Purpose: produce a string
 	 * 
-	 * @param String item
+	 * @param item the string to produce
 	 */
 	@Override
 	public void produce(String item) {
@@ -44,10 +46,10 @@ public class StringArrayListProducer implements Producer<String> {
 	}
 
 	/**
-	 * Purpose:
+	 * Purpose: produce a string at a specific index
 	 * 
-	 * @param int    index
-	 * @param String newString
+	 * @param index     the index to produce at
+	 * @param newString the string to produce
 	 */
 	public void produce(int index, String newString) {
 		this.list.add(index, newString);

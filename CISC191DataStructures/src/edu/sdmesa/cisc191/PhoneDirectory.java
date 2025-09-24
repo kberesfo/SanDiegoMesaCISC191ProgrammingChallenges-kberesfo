@@ -93,14 +93,14 @@ public class PhoneDirectory {
     /**
      * Purpose: Create an instance from of phone directory
      * 
-     * @param directory
+     * @param directory the directory to create
      */
     PhoneDirectory(Map<String, Person> directory) {
         this.directory = directory;
     }
 
     /**
-     * Purpose:
+     * Purpose: Find the phone number for a person
      * 
      * @param name find the phone number for a person using their name
      * @return the phone number for the person
@@ -128,9 +128,9 @@ public class PhoneDirectory {
     }
 
     /**
-     * Purpose:
+     * Purpose: Forget a person
      * 
-     * @param String name
+     * @param name the name of the person to forget
      */
     public void forget(String name) {
         if (this.directory.containsKey(name))

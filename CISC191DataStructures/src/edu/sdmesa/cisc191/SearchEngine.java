@@ -3,6 +3,26 @@ package edu.sdmesa.cisc191;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
+/**
+ * Lead Author(s):
+ * 
+ * @author Kiernan Beresford
+ * 
+ * 
+ *         References:
+ *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
+ *         Problem Solving.
+ *         Retrieved from
+ *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ * 
+ * 
+ *         Version/date: 9/18/25
+ * 
+ *         Responsibilities of class:
+ *         - Represents a search engine
+ *         - Adds a keyword and hyperlink to the search engine
+ *         - Searches for a keyword and returns the hyperlinks
+ */
 public class SearchEngine {
     // has-a hashtable of many strings
     Hashtable<String, ArrayList<String>> resultsMap;
